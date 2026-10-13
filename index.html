@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manager Library</title>
+  <meta name="description" content="Sistema para que una biblioteca pequeña lleve su catálogo de libros, sus socios y sus préstamos.">
+  <style>
+    :root { --bg: #f7f5f0; --fg: #1f2933; --muted: #52606d; --accent: #2f5d50; --card: #ffffff; --line: #e4e0d6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.6; }
+    header, main, footer { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    header { padding-top: 56px; padding-bottom: 32px; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 12px; color: var(--accent); }
+    .lead { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0; }
+    section { padding: 24px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 1.4rem; margin: 0 0 16px; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    footer { padding-top: 24px; padding-bottom: 40px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manager Library</h1>
+    <p class="lead">Un sistema para que una biblioteca pequeña lleve su catálogo de libros, sus socios y sus préstamos, y vea qué libros se prestan más.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="actores">
+      <h2 id="actores">Quién lo usa</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Administrador</h3>
+          <p>Mantiene el catálogo de libros y los socios, da de alta bibliotecarios y ve todos los reportes.</p>
+        </article>
+        <article class="card">
+          <h3>Bibliotecario</h3>
+          <p>Registra préstamos y devoluciones; consulta catálogo, socios y vencidos.</p>
+        </article>
+        <article class="card">
+          <h3>Socio</h3>
+          <p>Persona que pide libros prestados. No entra al sistema: es un dato, no un usuario.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="alcance">
+      <h2 id="alcance">Qué hace</h2>
+      <ul>
+        <li>Catálogo de libros con portada opcional y cinco categorías fijas: Novela, Ciencia, Tecnología, Historia e Infantil.</li>
+        <li>Socios.</li>
+        <li>Préstamos de 1 a 3 libros, con plazo de 14 días.</li>
+        <li>Devolución por libro.</li>
+        <li>Libros vencidos.</li>
+        <li>Reporte de los libros más prestados.</li>
+        <li>Inicio de sesión con roles.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="reglas">
+      <h2 id="reglas">Reglas de la biblioteca</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Máximo 3 libros</h3>
+          <p>Un socio no puede tener más de 3 libros sin devolver.</p>
+        </article>
+        <article class="card">
+          <h3>Plazo de 14 días</h3>
+          <p>Un socio con libros vencidos no pide más hasta devolverlos.</p>
+        </article>
+        <article class="card">
+          <h3>Historial que no cambia</h3>
+          <p>El préstamo guarda el título, el ISBN y la categoría del momento en que se prestó.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="fuera">
+      <h2 id="fuera">Qué no hace</h2>
+      <p>Multas y pagos, reservas, renovaciones, correo o SMS, importación masiva ni préstamos entre sedes.</p>
+    </section>
+  </main>
+
+  <footer>
+    Manager Library · Prueba técnica SDD · Ficha ADSO 3145556
+  </footer>
+</body>
+</html>
